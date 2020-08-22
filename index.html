@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Sharon Felicio-01.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <title>Sharon Felicio</title>
+</head>
+<body>
+    <header id=navbar>
+        <div class="container">
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
+                    <li class="nav-link"><a href="cv.html">CV</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="container">
+            <h3>Good day!</h3>
+            <h2>My name is</h2>
+            <h1>Sharon Felicio</h1>
+            <p>let me show you my portfolio, please scroll and click <a href="#portfolio"><span class="material-icons arrow-down" style="font-size: 30px;">arrow_drop_down_circle</span></a></p>
+        </div>
+    </section>
+    <section id="portfolio" >
+        <button class="portfolio"><h2 >Web Design</h2></button>
+        <div class="container webdesignToggle">
+            <div class="webdesign">
+                <div class="web-content">
+                    <div class="left half">
+                        <img src="marikina.jpg" alt="">
+                        <h3>Marikina Valley Medical Center</h3>
+                        <a href="https://marikinavalleymedicalcenter.com" target="__blank">https://marikinavalleymedicalcenter.com</a>
+                        <p>Designed web pages only using Photoshop. No web development</p>
+                        <button class="accordion" onclick="accordionToggle()">Preview</button>
+                        <div class="overlayToggle">
+                            <iframe src="https://marikinavalleymedicalcenter.com" title="Marikina Valley Medical Center">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="right half">
+                        <img src="tierra.jpg" alt="">
+                        <h3>Tierra de Lago</h3>
+                        <a href="https://tierradelago.com/" target="__blank">https://tierradelago.com/</a>
+                        <p>Designed landing page and inner pages only. No web development</p>
+                        <button class="accordion" onclick="accordionToggle()">Preview</button>
+                        <div class="overlayToggle">
+                            <iframe src="https://tierradelago.com/" title="Tierra">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="webdesign">
+                <div class="web-content">
+                    <div class="left half">
+                        <img src="ore.jpg" alt="">
+                        <h3>Oriental Peninsula Resource Group Inc</h3>
+                        <p>Designed web pages. No web development. On progress</p>
+                        <button class="accordion" onclick="accordionToggle()">Preview</button>
+                        <div class="overlayToggle">
+                            <img src="ore.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="right half">
+                        <img src="sharetea.jpg" alt="">
+                        <h3>Sharetea</h3>
+                        <p>Designed landing page and inner pages. On progress</p>
+                        <button class="accordion" onclick="accordionToggle()">Preview</button>
+                        <div class="overlayToggle">
+                           <img src="sharetea.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>          
+    <section id="webdev">
+        <button class="webdev"><h2><span class="text">I made these
+        just for fun </span><br>Web design and Web development</h2></button>
+        <div class="container webdevToggle">
+            <div class="webdesign">
+                <div class="web-content">
+                    <div class="left half">
+                        <img src="mockup3.jpg" alt="">
+                        <h3>Shoe Sample Site</h3>
+                        <a href="https://shoes-site.netlify.app" target="__blank">https://shoes-site.netlify.app</a>
+                        <p>Web Design and Development. HTML, CSS , JQuery and Javascript</p>
+                        <button class="accordion" onclick="accordionToggle()">Preview</button>
+                        <div class="overlayToggle">
+                            <iframe src="https://shoes-site.netlify.app/" title="Shoe Site">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="right half">
+                        <img src="mockup1.jpg" alt="">
+                        <h3>Photography Sample Site</h3>
+                        <a href="https://sfelicio.github.io/darkweb" target="__blank">https://sfelicio.github.io/darkweb</a>
+                        <p>Web Design and Development. HTML, CSS , JQuery and Javascript</p>
+                        <button class="accordion" onclick="accordionToggle()">Preview</button>
+                        <div class="overlayToggle">
+                            <iframe src="https://sfelicio.github.io/darkweb/" title="Dark Web">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="webdesign-center">
+                <div class="web-content-center">
+                    <img src="mockup2.jpg" alt="">
+                    <h3>Web Template Sample</h3>
+                    <a href="https://sfelicio.github.io/Template1" target="__blank">https://sfelicio.github.io/Template1</a>
+                    <p>Web Design and Development. HTML, CSS , JQuery and Javascript</p>
+                    <button class="accordion" onclick="accordionToggle()">Preview</button>
+                    <div class="overlayToggle">
+                        <iframe src="https://sfelicio.github.io/Template1/" title="Dark Web">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="logos"> 
+        <button class="logos"><h2>Logos</h2></button>   
+        <div class="container logosToggle">
+            <ul class="logos-wrap">
+                <li class="logo-item"><img src="logo1.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo2.png" alt=""></li>
+                <li class="logo-item"><img src="logo3.png" alt=""></li>
+                <li class="logo-item"><img src="logo4.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo5.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo6.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo7.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo8.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo9.png" alt=""></li>
+                <li class="logo-item"><img src="logo10.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo11.png" alt=""></li>
+                <li class="logo-item"><img src="logo12.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo13.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo14.jpg" alt=""></li>
+                <li class="logo-item"><img src="logo15.jpg" alt=""></li>
+            </ul>
+        </div>
+    </section>
+    <section id="digital-arts">
+        <button class="digital-arts"><h2>Digital Arts and Graphics</h2></button>
+        <div class="container digiToggle">
+            <div class="digital row">
+                <div class="col">
+                    <a href="#"><img src="invites1.jpg" alt=""></a>
+                    <a href="#"><img src="invites2.jpg" alt=""></a>
+                    <a href="#"><img src="invites3.jpg" alt=""></a>
+                    <a href="#"><img src="invites4.jpg" alt=""></a>
+                    <a href="#"><img src="invites5.jpg" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="#"><img src="brochure1.jpg" alt=""></a>
+                    <a href="#"><img src="businesscard1.jpg" alt=""></a>
+                    <a href="#"><img src="brochure2.jpg" alt=""></a>
+                    <a href="#"><img src="shirt2.jpg" alt=""></a>
+                    <a href="#"><img src="shirt3.jpg" alt=""></a>
+                    
+                </div>
+                <div class="col">
+                    <a href="#"><img src="fbcover1.jpg" alt=""></a>
+                    <a href="#"><img src="fbcover2.jpg" alt=""></a>
+                    <a href="#"><img src="fbcover3.jpg" alt=""></a>
+                    <a href="#"><img src="fbcover4.png" alt=""></a>
+                    <a href="#"><img src="fbcover5.jpg" alt=""></a>
+                    <a href="#"><img src="fbcover6.jpg" alt=""></a>
+                    <a href="#"><img src="fbcover7.jpg" alt=""></a>
+                    <a href="#"><img src="shirt1.jpg" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="#"><img src="graphics1.png" alt=""></a>
+                    <a href="#"><img src="graphics2.png" alt=""></a>
+                    <a href="#"><img src="graphics3.jpg" alt=""></a>
+                    <a href="#"><img src="graphics4.jpg" alt=""></a>
+                    <a href="#"><img src="graphics5.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>want to know more about me and my skillset, please <a href="cv.html"> click here </a></p>
+
+    </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            var acc = document.getElementsByClassName("portfolio");
+            var i;
+ 
+            for(i = 0; i < acc.length; i++){
+                acc[i].addEventListener("click", function(){
+                    this.classList.toggle("show");
+                    var webdesignToggle = this.nextElementSibling;
+                    if (webdesignToggle.style.display === "block"){
+                        webdesignToggle.style.display ="none";
+                    } else {
+                        webdesignToggle.style.display = "block";
+                    }
+                });
+            }
+        </script>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+ 
+            for(i = 0; i < acc.length; i++){
+                acc[i].addEventListener("click", function(){
+                    this.classList.toggle("active");
+                    var overlayToggle = this.nextElementSibling;
+                    if (overlayToggle.style.display === "block"){
+                        overlayToggle.style.display ="none";
+                    } else {
+                        overlayToggle.style.display = "block";
+                    }
+                });
+            }
+         </script>
+        <script>
+            var acc = document.getElementsByClassName("webdev");
+            var i;
+ 
+            for(i = 0; i < acc.length; i++){
+                acc[i].addEventListener("click", function(){
+                    this.classList.toggle("show");
+                    var webdevToggle = this.nextElementSibling;
+                    if (webdevToggle.style.display === "block"){
+                        webdevToggle.style.display ="none";
+                    } else {
+                        webdevToggle.style.display = "block";
+                    }
+                });
+            }
+        </script>
+        <script>
+            var acc = document.getElementsByClassName("logos");
+            var i;
+ 
+            for(i = 0; i < acc.length; i++){
+                acc[i].addEventListener("click", function(){
+                    this.classList.toggle("show");
+                    var logosToggle = this.nextElementSibling;
+                    if (logosToggle.style.display === "block"){
+                        logosToggle.style.display ="none";
+                    } else {
+                        logosToggle.style.display = "block";
+                    }
+                });
+            }
+        </script>
+        <script>
+            var acc = document.getElementsByClassName("digital-arts");
+            var i;
+ 
+            for(i = 0; i < acc.length; i++){
+                acc[i].addEventListener("click", function(){
+                    this.classList.toggle("show");
+                    var digiToggle = this.nextElementSibling;
+                    if (digiToggle.style.display === "block"){
+                        digiToggle.style.display ="none";
+                    } else {
+                        digiToggle.style.display = "block";
+                    }
+                });
+            }
+        </script>    
+    </body>
+</html>

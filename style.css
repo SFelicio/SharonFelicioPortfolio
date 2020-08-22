@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Oswald:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Oswald',sans-serif;
+    line-height: 1.5;
+    color: black;
+
+}
+/**GLOBAL**/
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+
+#navbar{
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+#navbar .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#navbar .nav{
+    justify-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar .nav .nav-list{
+    display: flex;
+    margin-right: 2rem;
+}
+.nav a{
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
+.nav a:hover{
+    color: hotpink;
+    background-color: black;
+    transition: .8s;
+}
+/**HERO**/
+#hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+#hero .container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#hero h1{
+    font-size: 10rem;
+    margin-top: 3rem;
+    position: relative;
+    font-family: 'grand hotel', sans-serif;
+}
+#hero h2{
+    font-size: 3rem;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+#hero h3{
+    font-size: 4rem;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+#hero p{
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    font-size: 2rem;
+}
+#hero .arrow-down:hover{
+    color: hotpink;
+}
+/**PORTFOLIIO**/
+#portfolio {
+    width: 100%;
+    height: 100%;
+    margin-top: 8rem;
+    margin-bottom: 0;   
+}
+#portfolio h2,
+#webdev h2,
+#logos h2,
+#digital-arts h2,
+#cv h2{
+    font-family: 'Oswald',sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#portfolio .portfolio,
+#webdev .webdev,
+#logos .logos,
+#digital-arts .digital-arts,
+#cv .cvLink{
+    width: 100%;
+    border: none;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+#portfolio .portfolio:hover,
+#webdev .webdev:hover,
+#logos .logos:hover,
+#digital-arts .digital-arts:hover,
+#cv .cvLink:hover{
+    background-color: #e7e5e5;
+    border: none;
+    outline: none;
+    color: hotpink;
+    transition: .5s;
+}
+#portfolio .webdesignToggle,
+#webdev .webdevToggle,
+#logos .logosToggle,
+#cv .cvToggle{
+    display: none;
+}
+.webdesign{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.web-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    position: relative;
+}
+.web-content .half img,
+.web-content-center img{
+    width: 180px;
+    height: 150px;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+.web-content .half,
+.web-content-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.web-content h3,
+.web-content-center h3{
+    font-size: 2rem;
+}
+.web-content a:hover,
+.web-content-center a:hover{
+    color: palevioletred;
+}
+.web-content p,
+.web-content-center p{
+    letter-spacing: 2px;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.web-content .half,
+.web-content-center{
+    position: relative;
+}
+.accordion{
+    border: 1px black solid;
+    padding: .5rem 3rem;
+    cursor: pointer;
+}
+.accordion:hover{
+    background-color: black;
+    color: #fff;
+    transition: .5s ease-in-out;
+}
+.overlayToggle{
+    display:none;
+    z-index: 2;
+}
+.left .overlayToggle iframe{
+    position: absolute;
+    top: 1rem;
+    left: 4rem;
+    height: 400px; 
+    width: 80%; 
+    border: .1rem black solid; 
+    padding: 1px;
+    z-index: 5;
+    background-color: #000;
+}
+.right .overlayToggle iframe{
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+    height: 400px; 
+    width: 80%; 
+    border: .1rem black solid; 
+    padding: 1px;
+    z-index: 5;
+}
+.left .overlayToggle img{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    height: 320px; 
+    width: 80%; 
+    border: .1rem black solid; 
+    padding: 1px;
+    z-index: 5;
+}
+.right .overlayToggle img{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    height: 320px; 
+    width: 80%; 
+    border: .1rem black solid; 
+    padding: 1px;
+    z-index: 5;
+    background-color: #000;
+}
+.active{
+    background-color: #000;
+    color: palevioletred;
+    border: 1px transparent solid;
+}
+.show{
+    background: #fff;
+}
+
+/**WEBDEV**/
+#webdev{
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+}
+#webdev .container{
+    padding-bottom: 2rem;
+}
+.text{
+    font-family: 'grand hotel';
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+#webdev .webdesign-center{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.web-content-center .overlayToggle iframe{
+    position: absolute;
+    top: 1rem;
+    left: 30%;
+    height: 400px; 
+    width: 40%; 
+    border: .1rem black solid; 
+    padding: 1px;
+    z-index: 5;
+    background-color: #000;
+}
+
+/**LOGOS **/
+#logos{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+.logos-wrap{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 4rem 0;;
+}
+.logos-wrap li{
+    cursor: pointer;
+}
+.logos-wrap li:hover{
+    filter: grayscale(100%);
+}
+.logos-wrap img{
+    width: 120px;
+    height: 110px;
+}
+
+/**DIGITAL-ARTS**/
+
+#digital-arts{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#digital-arts .digiToggle{
+    display: none;
+}
+#digital-arts .row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+}
+#digital-arts .col{
+    flex: 25%;
+    padding: .5rem;
+}
+#digital-arts .col img{
+    width: 100%;
+    margin-top: 1rem;
+    vertical-align: middle;
+}
+/**FOOTER**/
+
+footer p{
+    font-size: 2rem;
+    padding: 10rem 5rem;
+}
+footer a{
+    color: hotpink;
+}
+footer a:hover{
+    color: pink;
+}
+
+/** CV CSS**/
+#skillset{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#skillset h2{
+    font-size: 4rem;
+    padding: 5rem;
+}
+#skillset .container{
+    width: 80%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: initial;
+    text-align: center;
+    padding: 1rem 0 5rem 0;
+}
+#skillset .skill{
+    position: relative;
+}
+#skillset .skill-text{
+    font-size: 2rem;
+    background-color: #000;
+    color: #fff;
+    opacity: 1;
+    cursor: pointer;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#skillset .skill-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    transition: .5s ease-in-out;
+}
+#skillset .skill-overlay .material-icons{
+    font-size: 20px;
+    color: rgb(245, 198, 98);
+}
+#skillset .skill-overlay p{
+    font: 14px;
+    font-weight: 900;
+    color: hotpink;
+}
+#skillset .skill:hover .skill-text{
+    background-color: gainsboro;
+    color: transparent;
+}
+#skillset .skill:hover .skill-overlay{
+    opacity: 1;
+}
+#skillset .small{
+    font-size: 1rem;
+}
+#skillset .medium{
+    font-size: 1.5rem;
+}
+
+/**CV**/
+#cv .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+#cv .container img{
+    box-shadow: 5px 5px 10px black;
+    width: 80%;
+}
+#cv .downloadCV{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: hotpink;
+    padding: 1rem 0;
+}
+#cv .downloadCV a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#cv .downloadCV a:hover{
+    color: #fff;
+}
+
+
+
+/*** MEDIA QUERIES***/
+@media (max-width: 900px){
+    #hero h3{
+        font-size: 3.5rem;
+    }
+    #hero h2{
+        font-size: 2rem;
+    }
+    #hero h1{
+        font-size: 7rem;
+    }
+    #hero p{
+        font-size: 1.5rem;
+    }
+    .web-content{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+        position: relative;
+    }
+    .left .overlayToggle iframe,
+    .right .overlayToggle iframe{
+        position: absolute;
+        top: 1rem;
+        left: 20%;
+        height: 340px; 
+        width: 60%; 
+    }
+    .left .overlayToggle img,
+    .right .overlayToggle img{
+        position: absolute;
+        top: 0;
+        left: 20%;
+        height: 280px; 
+        width: 60%; 
+    }
+    .web-content-center .overlayToggle iframe{
+        left: 20%;
+        height: 340px; 
+        width: 60%;    
+    }
+    .logos-wrap{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: .5rem;
+        margin: 4rem 0;;
+    }
+    .logos-wrap img{
+        width: 80px;
+        height: 70px;
+    }
+    #skillset .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+    #skillset .skill-text{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 700px){
+    .web-content h3,
+    .web-content-center h3{
+    font-size: 1.5rem;
+    }
+    .web-content p,
+    .web-content-center p{
+        font-size: .8rem;
+    }
+    footer p{
+        font-size: 1.5rem;
+    }
+    #skillset .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+    #skillset .skill-text{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 667px){
+    #hero h3{
+        font-size: 3rem;
+    }
+    #hero h2{
+        font-size: 2rem;
+    }
+    #hero h1{
+        font-size: 4rem;
+    }
+    #hero p{
+        font-size: 1rem;
+    }
+    .text{
+        font-size: 1.8rem;
+    }
+    .left .overlayToggle iframe,
+    .right .overlayToggle iframe{
+        position: absolute;
+        top: 1rem;
+        left: 5%;
+        height: 340px; 
+        width: 90%; 
+    }
+    .left .overlayToggle img,
+    .right .overlayToggle img{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        height: 280px; 
+        width: 90%; 
+    }
+    .web-content-center .overlayToggle iframe{
+        left: 5%;
+        height: 340px; 
+        width: 90%;    
+    }
+    footer p{
+        font-size: 1rem;
+    }
+    #digital-arts .col{
+        flex: 50%;
+        padding: .5rem;
+    }
+}
+@media (max-width: 500px){
+    #hero{
+        height: 400px;
+    }
+    #hero .container{
+        height: 400px;
+    }
+    #portfolio h2,
+    #webdev h2,
+    #logos h2,
+    #digital-arts h2,
+    #cv h2{
+        font-family: 'Oswald',sans-serif;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .logos-wrap{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: .5rem;
+        margin: 4rem 0;;
+    }footer p{
+        padding: 8rem 5rem;
+    }
+    #skillset .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+        padding: .5rem;
+    }
+    #skillset h2{
+        padding: 1rem 0;
+    }
+    #skillset .skill-text{
+        height: 60px;
+    }
+    #skillset .skill-text{
+        font-size: 1.5rem;
+    }
+    #skillset .skill-overlay p{
+        font-size: 14px;
+    }
+
+}
